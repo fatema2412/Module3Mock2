@@ -18,7 +18,12 @@ import BookDetails from './pages/BookDetails'
     <Routes>
       <Route path="/" element={<Home/>}></Route>
       
-      <Route path="/book" element={<Book/>}> </Route>
+      <Route path="/book" element={
+        <PrivateRouter> 
+            <Book/>
+            </PrivateRouter>
+
+        }> </Route>
 
       <Route path="/login" element={<Login/>}></Route>
       <Route path="/booksDetails/:id" element={<BookDetails/>}></Route>
